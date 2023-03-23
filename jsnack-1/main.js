@@ -9,7 +9,7 @@ Infine stampa separatamente i 3 array.
 */
 
 // create array cars
-const cars = [ 
+const cars = [
 
    {
       marca: 'Ferrari',
@@ -64,28 +64,43 @@ const cars = [
 ];
 
 // sort cars (benzina) in a new array 
-const carBenzina = cars.filter ((car) =>{
+const carBenzina = cars.filter((car) => {
    if (car.alimentazione == 'benzina') {
       return true;
    }
    return false;
 })
-console.log(carBenzina);
 
 // sort cars (diesel) in a new array 
-const carDiesel = cars.filter ((car) =>{
+const carDiesel = cars.filter((car) => {
    if (car.alimentazione == 'diesel') {
       return true;
    }
    return false;
 })
-console.log(carDiesel);
 
 // sort cars (not benzina && not diesel) in a new array 
-const carOthers = cars.filter ((car) =>{
+const carOthers = cars.filter((car) => {
    if (car.alimentazione != 'diesel' && car.alimentazione != 'benzina') {
-      return true;
+      return true
    }
    return false;
 })
-console.log(carOthers);
+
+carBenzina.forEach(car => {
+
+   console.log(`Machine a benzina: ${car.marca} ${car.modello}`);
+   
+});
+
+carDiesel.forEach(car => {
+
+   console.log(`Machine a Diesel: ${car.marca} ${car.modello}`);
+   
+});
+
+carOthers.forEach(car => {
+
+   console.log(`Le altre macchine: ${car.marca} ${car.modello}`);
+   
+});
