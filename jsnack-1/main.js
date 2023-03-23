@@ -61,4 +61,31 @@ const cars = [
       modello: 'Leaf',
       alimentazione: 'elettrico'
    },
-]
+];
+
+// sort cars (benzina) in a new array 
+const carBenzina = cars.filter ((car) =>{
+   if (car.alimentazione == 'benzina') {
+      return true;
+   }
+   return false;
+})
+console.log(carBenzina);
+
+// sort cars (diesel) in a new array 
+const carDiesel = cars.filter ((car) =>{
+   if (car.alimentazione == 'diesel') {
+      return true;
+   }
+   return false;
+})
+console.log(carDiesel);
+
+// sort cars (not benzina && not diesel) in a new array 
+const carOthers = cars.filter ((car) =>{
+   if (car.alimentazione != 'diesel' && car.alimentazione != 'benzina') {
+      return true;
+   }
+   return false;
+})
+console.log(carOthers);
