@@ -10,15 +10,17 @@ Es: [‘pippo’, ‘PLUTO’, ‘Paperino’] => [‘Pippo’, ‘Pluto’, ‘
 const stringsArray = ['pippo', 'PLUTO', 'PaperinO'];
 
 
-// create array formatted
+// create array formatted to lower case
 const formatter = stringsArray.map((string) => {
   return string.toLowerCase();
 });
 
+// create array formatted to upper case onli the char in position '0'
 const finalString = formatter.map((toFormat) => {
    return toFormat.charAt(0).toUpperCase() + toFormat.slice(1);
 })
 
+// log final string array elements
 finalString.forEach(string => {
    console.log(string);
    
