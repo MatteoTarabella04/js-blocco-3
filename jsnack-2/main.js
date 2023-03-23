@@ -11,17 +11,13 @@ const stringsArray = ['pippo', 'PLUTO', 'PaperinO'];
 
 
 // create array formatted to lower case
-const formatter = stringsArray.map((string) => {
-  return string.toLowerCase();
+const formattedString = stringsArray.map((string) => {
+   const formatter = string.toLowerCase();
+   return formatter.charAt(0).toUpperCase() + formatter.slice(1);
 });
 
-// create array formatted to upper case only the char in position '0'
-const finalString = formatter.map((toFormat) => {
-   return toFormat.charAt(0).toUpperCase() + toFormat.slice(1);
-})
-
 // log final string array elements
-finalString.forEach(string => {
+formattedString.forEach(string => {
    console.log(string);
    
 });
