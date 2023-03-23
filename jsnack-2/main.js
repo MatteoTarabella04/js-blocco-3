@@ -15,7 +15,7 @@ const formatter = stringsArray.map((string) => {
   return string.toLowerCase();
 });
 
-// create array formatted to upper case onli the char in position '0'
+// create array formatted to upper case only the char in position '0'
 const finalString = formatter.map((toFormat) => {
    return toFormat.charAt(0).toUpperCase() + toFormat.slice(1);
 })
